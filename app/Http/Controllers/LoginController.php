@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('guest', ['except'=>'destroy']);
+        $this->middleware('guest', ['except' => 'destroy']);
     }
 
     public function create()
@@ -24,7 +24,6 @@ class LoginController extends Controller
         if(!auth::attempt($credentials)){
             
             return redirect()->back()->withErrors([
-                
                 'message' => 'Bad credentials. Please ty again!'
             ]);
         }
@@ -35,7 +34,6 @@ class LoginController extends Controller
     public function destroy()
     {
         auth()->logout();
-
         return redirect('/home');
     }
 }
