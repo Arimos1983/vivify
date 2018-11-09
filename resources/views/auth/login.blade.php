@@ -6,7 +6,12 @@
 </head>
 <body>
     <div class="container">
-        <form action="/login" method="POST">
+        <div>
+            @if(!auth()->check())
+            <a class="nav-link active ml-auto" href="{{route('register-form')}}">Sign up</a>
+            @endif
+        </div>
+        <form action="{{route('login')}}" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="email">Email</label>

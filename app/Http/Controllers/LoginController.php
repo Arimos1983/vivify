@@ -13,7 +13,7 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'destroy']);
     }
 
-    public function create()
+    public function showLoginForm()
     {
         return view('auth.login');
     }

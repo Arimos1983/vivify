@@ -9,9 +9,9 @@
         <div class="container">
             <nav class="nav blog-nav">
             @if(auth()->check())
-            <a class="nav-link active ml-auto" href="/logout">Logout</a>
+            <a class="nav-link active ml-auto" href="{{route('logout')}}">Logout</a>
             @else
-            <a class="nav-link active ml-auto" href="/login">Login</a>
+            <a class="nav-link active ml-auto" href="{{route('login-form')}}">Login</a>
             @endif
             </nav>
         </div>
