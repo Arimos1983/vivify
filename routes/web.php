@@ -19,3 +19,5 @@ Route::get('/home', 'HomeController@index')->middleware('mycheck');
 Route::get('/login', 'LoginController@create');
 Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LoginController@destroy');
+Route::get('/register', 'RegisterController@create');
+Route::post('/register', 'RegisterController@store');

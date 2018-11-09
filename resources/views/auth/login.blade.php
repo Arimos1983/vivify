@@ -6,6 +6,11 @@
 </head>
 <body>
     <div class="container">
+        <div>
+            @if(!auth()->check())
+            <a class="nav-link active ml-auto" href="/register">Sign up</a>
+            @endif
+        </div>
         <form action="/login" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
