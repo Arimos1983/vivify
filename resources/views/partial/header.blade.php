@@ -10,11 +10,11 @@
             {{auth()->user()->first_name}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
             </div>
             </ul>
             @else
-            <a class="nav-link active ml-auto" href="/login">Login</a>
+            <a class="nav-link active ml-auto" href="{{route('login-form')}}">Login</a>
             @endif
         </div>
     </nav>
