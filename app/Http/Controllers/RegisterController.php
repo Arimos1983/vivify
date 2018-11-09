@@ -14,10 +14,10 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    public function create()
+    public function showRegisterForm()
     {
         $countries = Country::all('name');
-        return view('auth.register', compact('countries',$countries));
+        return view('auth.register', compact('countries', $countries));
     }
 
     public function store(UserValidationRules $request)

@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">Registration form</h3>
-        <form action="/register" method="POST">
+        <form action="{{route('register')}}" method="POST">
             {{ csrf_field() }}
             
             <div class="form-group">

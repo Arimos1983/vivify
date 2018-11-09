@@ -8,10 +8,10 @@
     <div class="container">
         <div>
             @if(!auth()->check())
-            <a class="nav-link active ml-auto" href="/register">Sign up</a>
+            <a class="nav-link active ml-auto" href="{{route('register-form')}}">Sign up</a>
             @endif
         </div>
-        <form action="/login" method="POST">
+        <form action="{{route('login')}}" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="email">Email</label>
